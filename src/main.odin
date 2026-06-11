@@ -33,12 +33,14 @@ main :: proc() {
 	}
 	defer delete(bytes)
 
-	chisa := Chisa {
-		tokens = make([dynamic]Token, context.allocator),
-	}
+	chisa.tokens = make([dynamic]Token, context.allocator)
 	defer delete(chisa.tokens)
 
-	tokenize(&chisa, string(bytes))
+	tokenize(string(bytes))
 
-	fmt.print(chisa.tokens)
+	for token in chisa.tokens {
+		if token.type != TokenType.Illegal {
+			fmt.println(token)
+		}
+	}
 }

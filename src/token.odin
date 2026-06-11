@@ -2,6 +2,7 @@ package chisa
 
 TokenType :: enum {
 	Illegal,
+	// Puncuations
 	LeftBrace,
 	RightBrace,
 	LeftBracket,
@@ -10,6 +11,30 @@ TokenType :: enum {
 	RightParen,
 	Colon,
 	ColonColon,
+	Semicolon,
+	// Arithmetic
+	Plus,
+	Minus,
+	Star,
+	Slash,
+	Percent,
+	Caret,
+	Equal,
+	EqualEqual,
+	// Literals & Identifier
+	Identifier,
+	IntLiteral,
+	FloatLiteral,
+	StringLiteral,
+	True,
+	False,
+	// Types
+	IntType,
+	FloatType,
+	StringType,
+	BoolType,
+	// Keywords
+	Let,
 }
 
 Token :: struct {

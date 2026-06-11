@@ -1,0 +1,8 @@
+:: main () {
+    let a: int = 12345 + 67890 * 69;
+    let b: float = 123.45 - 67.89 / 42;
+    let c: string = "Hello, world!";
+    let d: bool = true;
+    let e: bool = false;
+    let f: bool = "hello" == "Hello";
+}
